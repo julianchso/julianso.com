@@ -1,13 +1,19 @@
 import { NavLink } from 'react-router';
 import NavMenuClose from './NavMenuClose';
+import NavMenuOpen from './NavMenuOpen';
 
 function Navbar() {
   return (
     <div className='nav'>
-      <ul>
-        <li>
+      <button aria-controls='nav__primary' aria-expanded='false' className='nav__mobile-toggle'>
+        <NavMenuOpen />
+      </button>
+
+      <ul id='nav__primary'>
+        <li className='nav__menu-button'>
           <button id='button__navbar_close'>
             <NavMenuClose />
+            <span className='sr-only'>Close menu</span>
           </button>
         </li>
         <li>
