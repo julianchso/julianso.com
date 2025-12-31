@@ -1,9 +1,7 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-  background-color: var(--color-dark);
   height: 100vh;
   --color-primary: ;
   --color-hover: #484848;
@@ -31,14 +29,42 @@
   box-sizing: border-box;
 }
 
-.nav {
-  position: fixed;
-  background-color: steelblue;
+html {
+  font-family: Poppins, 'Segoe UI', sans-serif;
+  color: var(--color-text);
 }
 
-.nav ul {
-  list-style: none;
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-image: url('/src/assets/tsarevets_abstract.png');
+  background-position-x: center;
+}
+
+main {
+  padding: min(5em, 7%);
+}
+
+.flex {
   display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  margin: 2rem 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#nav__primary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+  background: hsl(0 0% 100% / 0.1);
+  backdrop-filter: blur(1rem);
 }
 
 .nav li {
@@ -65,19 +91,22 @@
   border-bottom: 2px solid var(--color-text);
 }
 
+/* media queries */
+
 @media (max-width: 700px) {
-  .nav {
+  #nav__primary {
     position: fixed;
     z-index: 500;
     inset: 0 0 0 30%;
     padding: min(30vh, 10rem) 2em;
     border-left: 1px solid var(--color-hover);
-    background: hsl(0 0% 100% / 0.1);
+    display: flex;
+    flex-direction: column;
+    --gap: 2em;
   }
 
   .nav ul {
     width: 100%;
-    flex-direction: column;
   }
 
   .nav .nav__link {
@@ -102,6 +131,8 @@
   }
 }
 
+/* misc */
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -112,4 +143,19 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+#button__navbar_close {
+  width: 40px;
+  aspect-ratio: 1;
+  background: transparent;
+  border: none;
+}
+
+.menu-icon {
+  fill: #555555;
+}
+
+button {
+  cursor: pointer;
 }

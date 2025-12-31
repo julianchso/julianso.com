@@ -4,17 +4,12 @@ import NavMenuOpen from './NavMenuOpen';
 
 function Navbar() {
   return (
-    <div className='nav'>
-      <button aria-controls='nav__primary' aria-expanded='false' className='nav__mobile-toggle'>
-        <NavMenuOpen />
-      </button>
+    <div className='nav flex'>
+      <NavMenuOpen />
 
-      <ul id='nav__primary'>
-        <li className='nav__menu-button'>
-          <button id='button__navbar_close'>
-            <NavMenuClose />
-            <span className='sr-only'>Close menu</span>
-          </button>
+      <ul id='nav__primary' className='flex'>
+        <li>
+          <NavMenuClose />
         </li>
         <li>
           <NavLink to='/' className='nav__link nav__link-active'>
