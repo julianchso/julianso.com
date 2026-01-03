@@ -2,14 +2,21 @@ import MenuOpenIcon from '/src/assets/navbar_menu_open.svg?react';
 
 import '../App.css';
 
-function NavMenuOpen() {
+type NavMenuOpenProps = {
+  navOpen: boolean;
+  setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function NavMenuOpen({ navOpen, setNavOpen }: NavMenuOpenProps) {
   return (
     <>
-      {/* <button id='button__navbar_close' className='sr-only'>
-        <MenuOpenIcon />
-        Open Menu
-      </button> */}
-      <button id='button__navbar_close'>
+      <button
+        id='button__navbar_open'
+        className={navOpen ? 'is-hidden' : ''}
+        onClick={() => setNavOpen(true)}
+        aria-controls='nav__primary'
+        aria-expanded={navOpen}
+      >
         <span className='sr-only'>Open Menu</span>
         <MenuOpenIcon className='menu-icon' />
       </button>

@@ -1,16 +1,20 @@
 import { NavLink } from 'react-router';
 import NavMenuClose from './NavMenuClose';
 import NavMenuOpen from './NavMenuOpen';
+import { useState } from 'react';
 
 function Navbar() {
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
     <div className='nav flex'>
-      <NavMenuOpen />
+      <NavMenuOpen navOpen={navOpen} setNavOpen={setNavOpen} />
+      <NavMenuClose navOpen={navOpen} setNavOpen={setNavOpen} />
 
-      <ul id='nav__primary' className='flex'>
-        <li>
-          <NavMenuClose />
-        </li>
+      {/* DEBUG: show state */}
+      <p>navOpen: {navOpen ? 'true' : 'false'}</p>
+
+      <ul id='nav__primary' className={`flex ${navOpen ? 'nav__primary_translateX' : ''}`}>
         <li>
           <NavLink to='/' className='nav__link nav__link-active'>
             Home
