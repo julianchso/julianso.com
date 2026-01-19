@@ -8,6 +8,7 @@ type NavMenuOpenProps = {
 };
 
 function NavMenuOpen({ navOpen, setNavOpen }: NavMenuOpenProps) {
+  console.log('NavMenuOpen navOpen:', navOpen);
   return (
     <>
       <button
