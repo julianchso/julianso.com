@@ -14,9 +14,9 @@
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Inter', sans-serif;
 
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
+  --fs-h1: 4rem;
+  --fs-h2: 2.5em;
+  --fs-h3: 1.67rem;
   --fs-body: 1rem;
 
   --fw-reg: 300;
@@ -58,9 +58,15 @@ body {
   grid-column: 2;
 }
 
-/* main {
-  padding: min(5em, 7%);
-} */
+h1 {
+  font-size: var(--fs-h1);
+  align-self: start;
+}
+
+.subtitle {
+  font-size: var(--fs-h2);
+  align-self: start;
+}
 
 .flex {
   display: flex;
@@ -111,6 +117,49 @@ body {
   border-bottom: 2px solid var(--color-text);
 }
 
+/* Terminal */
+
+.terminal-container {
+  width: 100%;
+  grid-column: 2;
+  margin: 0 100px;
+}
+
+.terminal-header {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  column-gap: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.terminal-circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-circle_close {
+  background-color: #ff6159;
+}
+
+.terminal-circle_minimize {
+  background-color: #ffbd2e;
+}
+
+.terminal-circle_maximize {
+  background-color: #28c941;
+}
+
+.terminal-body {
+  height: 540px;
+  width: 100%;
+  background-color: #000;
+}
+
 /* misc */
 
 .sr-only {
@@ -145,13 +194,22 @@ button {
   height: 100vh;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  row-gap: 1rem;
+}
+
 .hero-container {
   display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 75% 25%;
-  max-width: 75%;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 65% 35%;
+  /* max-width: 80%; */
   padding: 10px;
   margin: 10px;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .crop-container {
