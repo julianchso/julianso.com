@@ -1,19 +1,25 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
-import HomeMain from '../components/Hero';
+import Hero from '../components/Hero';
 import Terminal from '../components/Terminal';
+import Projects from '../components/Projects';
 
 function Main() {
   return (
     <>
       <div className='layout'>
-        <Sidebar />
-        <Navbar />
-        <HomeMain />
-      </div>
-      <div className='layout'>
-        <Terminal />
+        <div className='section'>
+          <Sidebar />
+          <Navbar />
+          <Hero />
+        </div>
+        <div className='section'>
+          <Terminal />
+        </div>
+        <div className='section'>
+          <Projects />
+        </div>
       </div>
     </>
   );

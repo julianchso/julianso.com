@@ -9,7 +9,7 @@ function Hero() {
           <h1>Julian So</h1>
           <span className='subtitle'>&gt; Software Developer</span>
         </div>
-        <div className='crop-container'>
+        <div className='profilepic-container'>
           <img src={profilePic} alt='profile_pic' className='profile-pic' />
         </div>
       </div>
