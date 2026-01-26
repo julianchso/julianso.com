@@ -19,9 +19,7 @@ function Terminal() {
             </div>
             <div className='property'>
               <span className='property-key'>"Hobbies and Interests": </span>
-              <span className='property-value'>
-                ["Soccer", "Sci-fi", "Salsa and Bachata", "Video Games"]
-              </span>
+              <span className='property-value'>["Soccer", "Sci-fi", "Dancing", "Video Games"]</span>
             </div>
           </div>
         </div>
