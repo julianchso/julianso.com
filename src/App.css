@@ -1,6 +1,7 @@
 #root {
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin: 0;
   height: 100vh;
   --color-primary: ;
   --color-hover: #484848;
@@ -15,9 +16,9 @@
 
   /* mobile-first font-size */
   --fs-body: 1rem;
-  --fs-h1: 2.25rem;
-  --fs-h2: 1.75em;
-  --fs-h3: 1.375rem;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25em;
+  --fs-h3: 1.75rem;
   --fs-small: 0.875rem;
 
   /* line heights */
@@ -47,7 +48,6 @@ body {
   min-height: 100dvh;
   margin: 0;
   background-position-x: center;
-  /* background-color: hsl(211, 12%, 20%); */
 }
 
 h1,
@@ -135,10 +135,6 @@ button {
   width: 100%;
 }
 
-.nav__menu-button {
-  display: block;
-}
-
 #button__navbar_close {
   position: absolute;
   display: flex;
@@ -183,14 +179,11 @@ button {
   grid-column: 1;
   padding-top: 120px;
   height: 100vh;
-}
-
-.hero-container {
-  margin: 0 40px;
+  max-width: 840px;
 }
 
 .contact {
-  padding: 10px 20px;
+  padding: 10px 0px;
 }
 
 .subtitle {
@@ -338,26 +331,33 @@ button {
 @media (min-width: 960px) {
   .section {
     display: grid;
-    grid-template-columns: 240px 1fr 240px;
+    grid-template-columns: 240px minmax(0, 1fr) 240px;
     grid-template-rows: 120px 1fr;
     min-height: 100vh;
   }
 
   .hero {
-    display: grid;
     grid-column: 2;
+  }
+
+  .hero {
+    outline: 2px solid red;
+    margin-inline: auto;
+  }
+
+  .section {
+    outline: 2px solid blue;
   }
 
   .hero-container {
     display: grid;
     grid-template-columns: 65% 35%;
     grid-template-rows: auto 1fr;
-    width: 80%;
+    width: 100%;
     height: 100vh;
-    padding: 10px;
-    margin: 10px;
+    margin: 0;
     gap: 2rem;
-
+    padding: 0 2rem;
     align-items: center;
   }
 
@@ -379,22 +379,21 @@ button {
   .nav {
     position: sticky;
     height: 100px;
-    width: 100%;
+    /* width: 100%; */
     margin: 2rem 0;
     justify-content: flex-end;
-    align-items: center;
+    /* align-items: center; */
     grid-column: 2;
   }
 
   #nav__primary {
-    position: fixed;
     transform: none;
     list-style: none;
     inset: auto;
+    /* width: 100%; */
     flex-direction: row;
     justify-content: flex-end;
     height: auto;
-    width: 100%;
     padding: 1em;
     background: hsl(0 0% 100% / 0.1);
     backdrop-filter: blur(1rem);
@@ -402,10 +401,6 @@ button {
 
   .nav li {
     display: flex;
-  }
-
-  .nav li .nav__menu-button {
-    display: none;
   }
 
   .nav .nav__link {
@@ -436,6 +431,11 @@ button {
 
   .terminal-container {
     max-width: 840px;
+  }
+
+  #button__navbar_close,
+  #button__navbar_open {
+    display: none;
   }
 }
 

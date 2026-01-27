@@ -11,7 +11,7 @@ function Navbar() {
       <NavMenuOpen navOpen={navOpen} setNavOpen={setNavOpen} />
       <NavMenuClose navOpen={navOpen} setNavOpen={setNavOpen} />
 
-      <ul id='nav__primary' className={`flex ${navOpen ? 'nav__primary_translateX' : ''}`}>
+      <ul id='nav__primary' className={`${navOpen ? 'nav__primary_translateX' : ''}`}>
         <li>
           <NavLink to='/' className='nav__link nav__link-active'>
             Home
