@@ -15,9 +15,6 @@ function Main() {
           <Hero />
         </div>
         <div className='section'>
-          <Terminal />
-        </div>
-        <div className='section'>
           <Projects />
         </div>
       </div>

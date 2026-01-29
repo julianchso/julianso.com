@@ -1,7 +1,8 @@
 function Projects() {
   return (
     <>
-      <div>Lorem Ipsum</div>
+      <h2>Projects</h2>
+      <span>Lorem Ipsum</span>
     </>
   );
 }

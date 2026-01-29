@@ -1,6 +1,7 @@
 import React from 'react';
 import profilePic from '../assets/tsarevets.jpeg';
 import ContactLinks from './ContactLinks';
+import Terminal from './Terminal';
 
 import { faGithub, faSquareLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -19,6 +20,7 @@ function Hero() {
         <div className='profilepic-container'>
           <img src={profilePic} alt='profile_pic' className='profile-pic' />
         </div>
+        <Terminal />
       </div>
     </div>
   );
