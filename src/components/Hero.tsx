@@ -9,16 +9,21 @@ function Hero() {
   return (
     <div className='hero'>
       <div className='hero-container'>
-        <div className='header'>
-          <h1>Julian So</h1>
-          <span className='subtitle'>&gt; Software Developer</span>
-          <div className='contact'>
-            <ContactLinks icon={faGithub} link='https://github.com/julianchso' />
-            <ContactLinks icon={faSquareLinkedin} link='https://www.linkedin.com/in/chjulianso/' />
+        <div className='main'>
+          <div className='header'>
+            <h1>Julian So</h1>
+            <span className='subtitle'>&gt; Software Developer</span>
+            <div className='contact'>
+              <ContactLinks icon={faGithub} link='https://github.com/julianchso' />
+              <ContactLinks
+                icon={faSquareLinkedin}
+                link='https://www.linkedin.com/in/chjulianso/'
+              />
+            </div>
           </div>
-        </div>
-        <div className='profilepic-container'>
-          <img src={profilePic} alt='profile_pic' className='profile-pic' />
+          <div className='profilepic-container'>
+            <img src={profilePic} alt='profile_pic' className='profile-pic' />
+          </div>
         </div>
         <Terminal />
       </div>
