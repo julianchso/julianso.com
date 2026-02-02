@@ -1,8 +1,6 @@
-import React from 'react';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import Hero from '../components/Hero';
-import Terminal from '../components/Terminal';
 import Projects from '../components/Projects';
 
 function Main() {
