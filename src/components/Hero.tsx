@@ -4,6 +4,7 @@ import ContactLinks from './ContactLinks';
 import Terminal from './Terminal';
 
 import { faGithub, faSquareLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Github, Linkedin } from 'lucide-react';
 
 function Hero() {
   return (
@@ -14,11 +15,8 @@ function Hero() {
             <h1>Julian So</h1>
             <span className='subtitle'>&gt; Software Developer</span>
             <div className='contact'>
-              <ContactLinks icon={faGithub} link='https://github.com/julianchso' />
-              <ContactLinks
-                icon={faSquareLinkedin}
-                link='https://www.linkedin.com/in/chjulianso/'
-              />
+              <ContactLinks icon={Github} link='https://github.com/julianchso' />
+              <ContactLinks icon={Linkedin} link='https://www.linkedin.com/in/chjulianso/' />
             </div>
           </div>
           <div className='profilepic-container'>

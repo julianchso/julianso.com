@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Github, Linkedin, Play } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -25,17 +26,18 @@ function ProjectCard({ title, image, desc, tools, liveDemo, github }: ProjectCar
         </div>
 
         <div className='project-links'>
-          <div className='project-github'>
+          <button className='project-link project-github'>
+            <Github size={30} className='px-5' />
             <a href={github} target='_blank' rel='noopener noreferrer'>
               GitHub
             </a>
-          </div>
-          <div className='project-liveDemo'>
-            {' '}
+          </button>
+          <button className='project-link project-liveDemo'>
+            <Play size={30} className='px-5' />
             <a href={liveDemo} target='_blank' rel='noopener noreferrer'>
               Live Demo
             </a>
-          </div>
+          </button>
         </div>
       </div>
     </div>

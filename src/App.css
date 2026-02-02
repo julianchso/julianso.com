@@ -13,7 +13,7 @@
   --gray-900: hsl(0 0% 11%);
 
   /* ===== Blues (Primary) ===== */
-  --blue-400: hsl(209 89% 66%); /* soft */
+  --blue-400: hsl(220 70% 50% / 0.1); /* soft */
   --blue-500: hsl(213 92% 54%); /* primary */
   --blue-600: hsl(211 88% 60%); /* hover */
   --blue-700: hsl(213 98% 44%); /* active */
@@ -139,6 +139,18 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
+.section-title {
+  color: var(--gray-900);
+}
+
+.px-5 {
+  padding: 0 5px;
+}
+
 /* main START */
 
 .layout {
@@ -252,18 +264,14 @@ button {
   padding-top: 120px;
   height: fit-content;
   max-width: 840px;
-  margin-bottom: 30px;
-}
-
-.contact {
-  padding: 10px 0px;
+  margin-bottom: 50px;
 }
 
 .subtitle {
   font-size: var(--fs-h3);
 }
 
-.contactLinks {
+.contact-links {
   font-size: 40px;
 }
 
@@ -306,7 +314,7 @@ button {
   width: 100%;
   max-width: 600px;
   grid-column: 2;
-  margin-inline: auto;
+  margin: 20px auto;
   padding: 10px;
   font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
 }
@@ -409,8 +417,13 @@ button {
   flex-direction: row;
 }
 
+.contact-link {
+  padding: 0 15px;
+  color: var(--brand-primary);
+}
+
 .project-tools {
-  margin: 10px 0;
+  margin: 15px 0;
   display: flex;
   flex-direction: row;
 }
@@ -419,10 +432,10 @@ button {
   font-size: var(--fs-small);
   text-decoration: none;
   list-style: none;
-  padding: 0 10px;
+  padding: 3px 10px;
   border-radius: 10px;
-  border: 1px solid var(--blue-400);
-  color: var(--blue-700);
+  background-color: var(--blue-400);
+  color: var(--brand-primary);
 }
 
 .project-tool:nth-child(n + 2) {
@@ -436,6 +449,26 @@ button {
 .project-info {
   display: grid;
   grid-template-columns: 1;
+}
+
+.project-link {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+}
+
+.project-link > a {
+  color: var(--gray-700);
+}
+
+.project-link:nth-child(n + 2) {
+  margin: 0 10px;
+}
+
+.project-link:nth-child(1) {
+  margin-right: 5px;
 }
 
 /* misc */
@@ -553,11 +586,6 @@ button {
   }
 
   /* Terminal */
-
-  /* .terminal {
-    grid-column: 1 / span 2;
-    align-self: start;
-  } */
 
   .terminal-body {
     height: 300px;
