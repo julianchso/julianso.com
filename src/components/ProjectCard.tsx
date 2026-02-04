@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Github, Linkedin, Play } from 'lucide-react';
+import { Github, Play } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;

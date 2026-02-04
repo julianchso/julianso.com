@@ -8,12 +8,11 @@ type NavMenuOpenProps = {
 };
 
 function NavMenuOpen({ navOpen, setNavOpen }: NavMenuOpenProps) {
-  console.log('NavMenuOpen navOpen:', navOpen);
   return (
     <>
       <button
         id='button__navbar_open'
-        className={navOpen ? 'is-hidden' : ''}
+        className={`button__navbar ${navOpen && 'is-hidden'}`}
         onClick={() => setNavOpen(true)}
         aria-controls='nav__primary'
         aria-expanded={navOpen}

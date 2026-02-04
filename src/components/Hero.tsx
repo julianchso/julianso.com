@@ -1,9 +1,7 @@
-import React from 'react';
 import profilePic from '../assets/tsarevets.jpeg';
 import ContactLinks from './ContactLinks';
 import Terminal from './Terminal';
 
-import { faGithub, faSquareLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Github, Linkedin } from 'lucide-react';
 
 function Hero() {
