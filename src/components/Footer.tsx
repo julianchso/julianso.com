@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className='footer'>
-      <span>&copy; Julian So</span>
+      <span>&copy; 2026 Julian So</span>
     </div>
   );
 }

@@ -18,14 +18,14 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/About' className='nav__link'>
-            About Me
-          </NavLink>
-        </li>
-        <li>
           <NavLink to='/portfolio' className='nav__link'>
-            Portfolio
+            Projects
           </NavLink>
+          <li>
+            <NavLink to='/About' className='nav__link'>
+              Resume
+            </NavLink>
+          </li>
         </li>
       </ul>
     </div>

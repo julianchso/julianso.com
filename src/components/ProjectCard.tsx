@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 function ProjectCard({ title, image, desc, tools, liveDemo, github }: ProjectCardProps) {
   return (
-    <div className='project-card'>
+    <div className='project-card shadow'>
       <div className='project-image'>{image}</div>
       <div className='project-info'>
         <div className='project-title'>{title}</div>

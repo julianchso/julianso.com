@@ -1,6 +1,7 @@
 import profilePic from '../assets/tsarevets.jpeg';
 import ContactLinks from './ContactLinks';
 import Terminal from './Terminal';
+import Subtitle from '../services/subtitle';
 
 import { Github, Linkedin } from 'lucide-react';
 
@@ -11,7 +12,9 @@ function Hero() {
         <div className='main'>
           <div className='header'>
             <h1>Julian So</h1>
-            <span className='subtitle'>&gt; Software Developer</span>
+            <div>
+              <Subtitle />
+            </div>
             <div className='contact'>
               <ContactLinks icon={Github} link='https://github.com/julianchso' />
               <ContactLinks icon={Linkedin} link='https://www.linkedin.com/in/chjulianso/' />

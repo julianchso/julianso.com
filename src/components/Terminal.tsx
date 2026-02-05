@@ -2,7 +2,7 @@ function Terminal() {
   return (
     <>
       <div className='terminal-container'>
-        <div className='terminal shadow-macOS'>
+        <div className='terminal shadow'>
           <div className='terminal-header'>
             <div className='terminal-circle terminal-circle_close'></div>
             <div className='terminal-circle terminal-circle_minimize'></div>
@@ -19,7 +19,9 @@ function Terminal() {
             </div>
             <div className='property'>
               <span className='property-key'>"Hobbies and Interests": </span>
-              <span className='property-value'>["Soccer", "Sci-fi", "Dancing", "Video Games"]</span>
+              <span className='property-value'>
+                ["Soccer", "Sci-fi books", "Dancing", "Video Games"]
+              </span>
             </div>
           </div>
         </div>
