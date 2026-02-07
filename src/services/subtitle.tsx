@@ -10,7 +10,7 @@ function Subtitle() {
   useEffect(() => {
     const current = subtitles[index];
 
-    let timeout;
+    let timeout: number;
 
     if (phase === 'typing') {
       if (charCount < current.length) {

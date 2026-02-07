@@ -1,7 +1,9 @@
 import { NavLink } from 'react-router';
+import { useState } from 'react';
+import { Moon, Sun } from 'lucide-react';
+
 import NavMenuClose from './NavMenuClose';
 import NavMenuOpen from './NavMenuOpen';
-import { useState } from 'react';
 
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -25,6 +27,12 @@ function Navbar() {
             <NavLink to='/About' className='nav__link'>
               Resume
             </NavLink>
+          </li>
+          <li>
+            <button>
+              <Moon />
+              <Sun />
+            </button>
           </li>
         </li>
       </ul>

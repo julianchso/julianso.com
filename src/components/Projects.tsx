@@ -2,9 +2,9 @@ import ProjectCard from './ProjectCard';
 
 function Projects() {
   return (
-    <div className='projects'>
-      <h2 className='section-title'>Projects</h2>
-      <div className='projects-container'>
+    <div className='projects__content'>
+      <h2 className='section__title'>Projects</h2>
+      <div className='projects__layout'>
         <ProjectCard
           title='lorem'
           image='Placeholder'

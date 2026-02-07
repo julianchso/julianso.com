@@ -1,5 +1,4 @@
 import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
@@ -7,18 +6,20 @@ import Footer from '../components/Footer';
 function Main() {
   return (
     <>
+      <Navbar />
+
       <div className='layout'>
-        <div className='section'>
-          <Sidebar />
-          <Navbar />
+        <section className='section'>
           <Hero />
-        </div>
-        <div className='section'>
+        </section>
+
+        <section className='section'>
           <Projects />
-        </div>
-        <div className='section'>
+        </section>
+
+        <section className='section'>
           <Footer />
-        </div>
+        </section>
       </div>
     </>
   );
