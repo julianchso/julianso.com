@@ -12,12 +12,11 @@ function NavMenuOpen({ navOpen, setNavOpen }: NavMenuOpenProps) {
     <>
       <button
         id='button__navbar_open'
-        className={`button__navbar ${navOpen && 'is-hidden'}`}
+        className={`navbar__open-close ${navOpen && 'is-hidden'}`}
         onClick={() => setNavOpen(true)}
         aria-controls='nav__primary'
         aria-expanded={navOpen}
       >
-        <span className='sr-only'>Open Menu</span>
         <MenuOpenIcon className='menu-icon' />
       </button>
     </>

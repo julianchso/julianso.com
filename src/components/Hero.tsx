@@ -1,7 +1,7 @@
 import profilePic from '../assets/tsarevets.jpeg';
 import ContactLinks from './ContactLinks';
 import Terminal from './Terminal';
-import Subtitle from '../services/subtitle';
+import Subtitle from './subtitle';
 
 import { Github, Linkedin } from 'lucide-react';
 

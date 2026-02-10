@@ -26,18 +26,24 @@ function ProjectCard({ title, image, desc, tools, liveDemo, github }: ProjectCar
         </div>
 
         <div className='project-card__links'>
-          <button className='project-card__link project-card__github'>
+          <a
+            href={github}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='project-card__link project-card__github'
+          >
             <Github size={30} className='px-5' />
-            <a href={github} target='_blank' rel='noopener noreferrer'>
-              GitHub
-            </a>
-          </button>
-          <button className='project-card__link project-card__liveDemo'>
+            <span>GitHub</span>
+          </a>
+          <a
+            href={liveDemo}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='project-card__link project-card__liveDemo'
+          >
             <Play size={30} className='px-5' />
-            <a href={liveDemo} target='_blank' rel='noopener noreferrer'>
-              Live Demo
-            </a>
-          </button>
+            <span>Live Demo</span>
+          </a>
         </div>
       </div>
     </div>

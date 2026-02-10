@@ -9,11 +9,11 @@ function Main() {
       <Navbar />
 
       <div className='layout'>
-        <section className='section'>
+        <section className='section' id='home'>
           <Hero />
         </section>
 
-        <section className='section'>
+        <section className='section' id='projects'>
           <Projects />
         </section>
 

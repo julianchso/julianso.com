@@ -12,12 +12,11 @@ function NavMenuClose({ navOpen, setNavOpen }: NavMenuCloseProps) {
     <>
       <button
         id='button__navbar_close'
-        className={`button__navbar ${navOpen ? '' : 'is-hidden'}`}
+        className={`navbar__open-close ${navOpen ? '' : 'is-hidden'}`}
         onClick={() => setNavOpen(false)}
         aria-controls='nav__primary'
         aria-expanded={navOpen}
       >
-        <span className='sr-only'>Close Menu</span>
         <MenuCloseIcon className='menu-icon' />
       </button>
     </>
