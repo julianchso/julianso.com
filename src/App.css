@@ -9,15 +9,40 @@
   --gray-50: hsl(0 0% 97%);
   --gray-100: hsl(0 0% 92%);
   --gray-300: hsl(0 0% 70%);
+  --gray-500: hsl(0 0% 55%);
   --gray-700: hsl(210 10% 30%);
   --gray-800: hsl(210 10% 20%);
   --gray-900: hsl(0 0% 11%);
 
-  /* Blues (Primary) */
-  --blue-400: hsl(220 70% 50% / 0.1);
-  --blue-500: hsl(213 92% 54%);
-  --blue-600: hsl(211 88% 60%);
-  --blue-700: hsl(213 98% 44%);
+  --black-900-a10: hsl(0 0% 0% / 0.1);
+  --black-900-a20: hsl(0 0% 0% / 0.2);
+
+  /* main color (blue) */
+  --blue-50: hsl(208 91% 95%);
+  --blue-100: hsl(208 91% 78%);
+  --blue-300: hsl(208 91% 70%);
+  --blue-500: hsl(208 91% 55%);
+  --blue-700: hsl(208 91% 30%);
+  --blue-800: hsl(208 91% 20%);
+  --blue-900: hsl(208 91% 9%);
+
+  /* accent color (teal) */
+  --teal-50: hsl(186 54% 95%);
+  --teal-100: hsl(186 54% 78%);
+  --teal-300: hsl(186 54% 70%);
+  --teal-500: hsl(186 54% 55%);
+  --teal-700: hsl(186 54% 30%);
+  --teal-800: hsl(186 54% 20%);
+  --teal-900: hsl(186 54% 9%);
+
+  /* other colors */
+  --orange-300: hsl(357 61% 37%);
+  --orange-500: hsl(19 81% 56%);
+  --orange-900: hsl(19 81% 15%);
+  --blue-gray-800: hsl(215 15% 16%);
+
+  --green-500: hsl(146 33% 21%);
+  --violet-500: hsl(285 29% 21%);
 
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Inter', sans-serif;
@@ -40,27 +65,32 @@
 
 :root.theme-light {
   /* backgrounds */
-  --bg-page: hsl(194 54% 95%);
-  --bg-surface: var(--gray-0);
-  --bg-elevated: hsl(0 0% 0% / 0.04);
+  --bg-page: var(--blue-50);
+  --bg-button: var(--teal-100);
+
+  /* main color */
+  --color-primary-main: var(--blue-100);
+  --color-primary-hover: var(--blue-300);
+  --color-primary-active: var(--blue-500);
+
+  /* accent color */
+  --color-accent-main: var(--teal-300);
+  --color-accent-hover: var(--teal-500);
+  --color-accent-active: var(--teal-700);
 
   /* text */
   --text-primary: var(--gray-900);
   --text-secondary: var(--gray-700);
-  --text-muted: var(--gray-300);
 
   /* borders */
-  --border-subtle: hsl(0 0% 0% / 0.1);
-  --border-strong: hsl(0 0% 0% / 0.2);
-
-  /* ===== Brand (Blue) ===== */
-  --brand-primary: var(--blue-500);
-  --brand-hover: var(--blue-600);
-  --brand-active: var(--blue-700);
+  --border-subtle: var(--black-900-a20);
+  --border-strong: var(--black-900-a10);
 
   /* Terminal */
   --terminal-header: var(--gray-100);
   --terminal-bg: var(--gray-50);
+  --terminal-key: var(--green-500);
+  --terminal-value: var(--violet-500);
 
   /* Project */
   --project-card-bg: var(--gray-100);
@@ -68,27 +98,32 @@
 
 :root.theme-dark {
   /* backgrounds */
-  --bg-page: #2f4550;
-  --bg-surface: var(--gray-800);
-  --bg-elevated: hsl(0 0% 100% / 0.05);
+  --bg-page: var(--blue-900);
+  --bg-button: var(--teal-800);
+
+  /* main color */
+  --color-primary-main: var(--blue-700);
+  --color-primary-hover: var(--blue-800);
+  --color-primary-active: var(--blue-500);
+
+  /* accent color */
+  --color-accent-main: var(--teal-700);
+  --color-accent-hover: var(--teal-600);
+  --color-accent-active: var(--teal-500);
 
   /* text */
   --text-primary: var(--gray-0);
   --text-secondary: var(--gray-300);
-  --text-muted: var(--gray-700);
 
   /* borders */
-  --border-subtle: hsl(0 0% 100% / 0.1);
-  --border-strong: hsl(0 0% 100% / 0.2);
-
-  /* ===== Brand (Blue) ===== */
-  --brand-primary: var(--blue-700);
-  --brand-hover: var(--blue-600);
-  --brand-active: var(--blue-500);
+  --border-subtle: var(--black-900-a10);
+  --border-strong: var(--black-900-a20);
 
   /* Terminal */
   --terminal-header: var(--gray-300);
-  --terminal-bg: var(--gray-700);
+  --terminal-bg: var(--blue-gray-800);
+  --terminal-key: var(--orange-500);
+  --terminal-value: var(--orange-300);
 
   /* Project */
   --project-card-bg: var(--gray-700);
@@ -165,10 +200,10 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
 }
-
+/* 
 .section {
   margin: 0 40px;
-}
+} */
 
 .section:first-child {
   padding-top: 3rem;
@@ -426,11 +461,11 @@ a:hover {
 }
 
 .property-key {
-  color: #16e0bd;
+  color: var(--terminal-key);
 }
 
 .property-value {
-  color: #913400;
+  color: var(--terminal-value);
 }
 
 /* terminal END*/
@@ -492,8 +527,8 @@ a:hover {
   list-style: none;
   padding: 3px 10px;
   border-radius: 10px;
-  background-color: var(--gray-300);
-  color: var(--bg-page);
+  background-color: var(--bg-button);
+  color: var(--text-primary);
 }
 
 .project-card__tool:nth-child(n + 2) {
@@ -522,6 +557,7 @@ a:hover {
   display: flex;
   align-items: center;
   color: var(--text-primary);
+  background-color: var(--color-primary-main);
 }
 
 .project-card__link > a {
@@ -636,7 +672,7 @@ a:hover {
   }
 
   .nav .nav__link--active {
-    border-bottom: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-accent-active);
   }
 
   .nav__controls {
@@ -727,7 +763,7 @@ a:hover {
   }
 
   .project-card__link:hover {
-    background-color: var(--bg-page);
+    background-color: var(--color-primary-hover);
   }
 }
 
