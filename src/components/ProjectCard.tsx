@@ -32,7 +32,7 @@ function ProjectCard({ title, image, desc, tools, liveDemo, github }: ProjectCar
             rel='noopener noreferrer'
             className='project-card__link project-card__github'
           >
-            <Github size={30} className='px-5' />
+            <Github size={25} className='px-5' />
             <span>GitHub</span>
           </a>
           <a
@@ -41,7 +41,7 @@ function ProjectCard({ title, image, desc, tools, liveDemo, github }: ProjectCar
             rel='noopener noreferrer'
             className='project-card__link project-card__liveDemo'
           >
-            <Play size={30} className='px-5' />
+            <Play size={25} className='px-5' />
             <span>Live Demo</span>
           </a>
         </div>

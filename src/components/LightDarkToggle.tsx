@@ -30,7 +30,9 @@ function LightDarkToggle() {
       className='light-dark-toggle'
       aria-label={`Switch to ${toggle === 'light' ? 'dark' : 'light'} theme`}
     >
-      <button onClick={handleClickTheme}>{toggle === 'light' ? <Sun /> : <Moon />}</button>
+      <button onClick={handleClickTheme}>
+        {toggle === 'light' ? <Sun size={24} /> : <Moon size={24} />}
+      </button>
     </div>
   );
 }
