@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { HashRouter } from 'react-router';
 
 import { keepTheme } from './utils/theme';
 import Main from './pages/Main';

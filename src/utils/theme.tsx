@@ -1,4 +1,6 @@
-function setTheme(theme) {
+type Theme = 'theme-dark' | 'theme-light';
+
+function setTheme(theme: Theme) {
   localStorage.setItem('theme', theme);
   document.documentElement.className = theme;
 }

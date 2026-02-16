@@ -1,6 +1,4 @@
-import { HashRouter, Link } from 'react-router';
 import { useEffect, useState } from 'react';
-import { Moon, Sun } from 'lucide-react';
 
 import NavMenuClose from './NavMenuClose';
 import NavMenuOpen from './NavMenuOpen';

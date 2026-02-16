@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { Github, Play } from 'lucide-react';
 
 interface ProjectCardProps {
@@ -7,7 +6,7 @@ interface ProjectCardProps {
   desc: string;
   tools: Array<string>;
   liveDemo?: string;
-  github: ReactNode;
+  github: string;
 }
 
 function ProjectCard({ title, image, desc, tools, liveDemo, github }: ProjectCardProps) {
