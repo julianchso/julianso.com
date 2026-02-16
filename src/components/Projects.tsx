@@ -1,4 +1,6 @@
 import ProjectCard from './ProjectCard';
+import pokestore from '../assets/pokestore.jpg';
+import fileUploader from '../assets/fileUploader.png';
 
 function Projects() {
   return (
@@ -6,36 +8,20 @@ function Projects() {
       <h2>Projects</h2>
       <div className='projects__layout'>
         <ProjectCard
-          title='lorem'
-          image='Placeholder'
-          desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae aperiam eveniet, dicta distinctio minus vero enim quam voluptate iusto.'
-          tools={['javascript', 'node.js', 'react']}
-          liveDemo='liveDemo'
-          github='github'
+          title='Pokemon Store'
+          image={pokestore}
+          desc='A Pokémon-themed online store built with React, featuring product data fetched from the PokéAPI. The application demonstrates component-based architecture, API integration, and responsive UI design to simulate a shopping cart on any e-commerce website.'
+          tools={['javascript', 'node.js', 'react', 'api']}
+          // liveDemo='liveDemo'
+          github='https://github.com/julianchso/shopping-cart-pokemon'
         />
         <ProjectCard
-          title='lorem'
-          image='Placeholder'
-          desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae aperiam eveniet, dicta distinctio minus vero enim quam voluptate iusto.'
-          tools={['javascript', 'node.js', 'react']}
-          liveDemo='liveDemo'
-          github='github'
-        />
-        <ProjectCard
-          title='lorem'
-          image='Placeholder'
-          desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae aperiam eveniet, dicta distinctio minus vero enim quam voluptate iusto.'
-          tools={['javascript', 'node.js', 'react']}
-          liveDemo='liveDemo'
-          github='github'
-        />
-        <ProjectCard
-          title='lorem'
-          image='Placeholder'
-          desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vitae aperiam eveniet, dicta distinctio minus vero enim quam voluptate iusto.'
-          tools={['javascript', 'node.js', 'react']}
-          liveDemo='liveDemo'
-          github='github'
+          title='File Uploader'
+          image={fileUploader}
+          desc='A file uploader built with React and Supabase, allowing users to create nested folders within a folder tree and upload files of any type. The application simulates cloud storage platforms such as Dropbox and Google Drive, showcasing file management and database integration.'
+          tools={['javascript', 'node.js', 'react', 'api']}
+          // liveDemo='liveDemo'
+          github='https://github.com/julianchso/odin-FileUploader'
         />
       </div>
     </div>

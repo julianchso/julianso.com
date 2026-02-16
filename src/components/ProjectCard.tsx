@@ -3,17 +3,19 @@ import { Github, Play } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
-  image?: ReactNode;
+  image?: string;
   desc: string;
   tools: Array<string>;
-  liveDemo?: ReactNode;
+  liveDemo?: string;
   github: ReactNode;
 }
 
 function ProjectCard({ title, image, desc, tools, liveDemo, github }: ProjectCardProps) {
   return (
     <div className='project-card shadow'>
-      <div className='project-card__image'>{image}</div>
+      <div className='project-card__image-container'>
+        <img className='project-card__image' src={image} alt={title} />
+      </div>
       <div className='project-card__info'>
         <div className='project-card__title'>{title}</div>
         <div className='project-card__desc'>{desc}</div>
@@ -35,15 +37,17 @@ function ProjectCard({ title, image, desc, tools, liveDemo, github }: ProjectCar
             <Github size={25} className='px-5' />
             <span>GitHub</span>
           </a>
-          <a
-            href={liveDemo}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='project-card__link project-card__liveDemo'
-          >
-            <Play size={25} className='px-5' />
-            <span>Live Demo</span>
-          </a>
+          {liveDemo && (
+            <a
+              href={liveDemo}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='project-card__link project-card__liveDemo'
+            >
+              <Play size={25} className='px-5' />
+              <span>Live Demo</span>
+            </a>
+          )}
         </div>
       </div>
     </div>
