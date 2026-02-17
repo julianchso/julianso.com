@@ -42,11 +42,7 @@ function Navbar() {
             <a onClick={() => scrollTo('projects')}>Projects</a>
           </li>
           <li className='nav__link '>
-            <a
-              href='../assets/Julian_So_Software_Resume.pdf'
-              className='nav__link__Resume'
-              download
-            >
+            <a href='/Julian_So_Software_Resume.pdf' className='nav__link__Resume' download>
               Resume
             </a>
           </li>
