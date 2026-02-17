@@ -352,6 +352,10 @@ a:visited {
   width: 100%;
 }
 
+li > a {
+  cursor: pointer;
+}
+
 .navbar__open-close {
   display: flex;
   background: transparent;

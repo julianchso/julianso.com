@@ -4,6 +4,7 @@ import NavMenuClose from './NavMenuClose';
 import NavMenuOpen from './NavMenuOpen';
 import ProgressBar from './ProgressBar';
 import LightDarkToggle from './LightDarkToggle';
+import scrollTo from '../utils/scrollTo';
 
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -35,14 +36,14 @@ function Navbar() {
 
         <ul className={`nav__primary ${navOpen ? 'nav__primary--open' : ''}`}>
           <li className='nav__link'>
-            <a href='#home'>Home</a>
+            <a onClick={() => scrollTo('home')}>Home</a>
           </li>
           <li className='nav__link'>
-            <a href='#projects'>Projects</a>
+            <a onClick={() => scrollTo('projects')}>Projects</a>
           </li>
           <li className='nav__link '>
             <a
-              href='../assets/Julian_So Software Resume (2026.01.11).pdf'
+              href='../assets/Julian_So_Software_Resume.pdf'
               className='nav__link__Resume'
               download
             >
