@@ -25,28 +25,33 @@ function Navbar() {
     <>
       <ProgressBar />
       <div className={`nav ${scrolled ? 'nav--shrink' : ''}`}>
-        <div className='nav__toggle'>
-          <LightDarkToggle />
+        <div className='logo'>
+          JS<span className='logo-period'>.</span>
         </div>
+        <div className='nav_buttons'>
+          <div className='nav__toggle'>
+            <LightDarkToggle />
+          </div>
 
-        <div className='nav__controls'>
-          <NavMenuOpen navOpen={navOpen} setNavOpen={setNavOpen} />
-          <NavMenuClose navOpen={navOpen} setNavOpen={setNavOpen} />
+          <div className='nav__controls'>
+            <NavMenuOpen navOpen={navOpen} setNavOpen={setNavOpen} />
+            <NavMenuClose navOpen={navOpen} setNavOpen={setNavOpen} />
+          </div>
+
+          <ul className={`nav__primary ${navOpen ? 'nav__primary--open' : ''}`}>
+            <li className='nav__link'>
+              <a onClick={() => scrollTo('home')}>Home</a>
+            </li>
+            <li className='nav__link'>
+              <a onClick={() => scrollTo('projects')}>Projects</a>
+            </li>
+            <li className='nav__link '>
+              <a href='/Julian_So_Software_Resume.pdf' className='nav__link__Resume' download>
+                Resume
+              </a>
+            </li>
+          </ul>
         </div>
-
-        <ul className={`nav__primary ${navOpen ? 'nav__primary--open' : ''}`}>
-          <li className='nav__link'>
-            <a onClick={() => scrollTo('home')}>Home</a>
-          </li>
-          <li className='nav__link'>
-            <a onClick={() => scrollTo('projects')}>Projects</a>
-          </li>
-          <li className='nav__link '>
-            <a href='/Julian_So_Software_Resume.pdf' className='nav__link__Resume' download>
-              Resume
-            </a>
-          </li>
-        </ul>
       </div>
     </>
   );

@@ -19,7 +19,7 @@ function Projects() {
           title='File Uploader'
           image={fileUploader}
           desc='A file uploader built with React and Supabase, allowing users to create nested folders within a folder tree and upload files of any type. The application simulates cloud storage platforms such as Dropbox and Google Drive, showcasing file management and database integration.'
-          tools={['javascript', 'node.js', 'react', 'api']}
+          tools={['typescript', 'EJS', 'react', 'database']}
           // liveDemo='liveDemo'
           github='https://github.com/julianchso/odin-FileUploader'
         />

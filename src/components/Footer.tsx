@@ -1,7 +1,11 @@
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className='footer__content'>
-      <span>&copy; 2026 Julian So</span>
+      <span>
+        &copy; Julian So <span>{currentYear}</span>
+      </span>
     </div>
   );
 }
