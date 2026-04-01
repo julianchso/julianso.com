@@ -12,7 +12,7 @@ function Projects() {
           image={pokestore}
           desc='A Pokémon-themed online store built with React, featuring product data fetched from the PokéAPI. The application demonstrates component-based architecture, API integration, and responsive UI design to simulate a shopping cart on any e-commerce website.'
           tools={['javascript', 'node.js', 'react', 'api']}
-          // liveDemo='liveDemo'
+          liveDemo='https://julianchso.github.io/shopping-cart-pokemon'
           github='https://github.com/julianchso/shopping-cart-pokemon'
         />
         <ProjectCard
