@@ -1,11 +1,12 @@
 import ProjectCard from './ProjectCard';
 import pokestore from '../assets/pokestore.jpg';
 import fileUploader from '../assets/fileUploader.png';
+import battleship from '../assets/battleship.png';
 
 function Projects() {
   return (
     <div className='projects__content'>
-      <h2>Projects</h2>
+      <h2 className='section__header'>/ projects /</h2>
       <div className='projects__layout'>
         <ProjectCard
           title='Pokemon Store'
@@ -22,6 +23,14 @@ function Projects() {
           tools={['typescript', 'EJS', 'react', 'database']}
           // liveDemo='liveDemo'
           github='https://github.com/julianchso/odin-FileUploader'
+        />
+        <ProjectCard
+          title='Battleship'
+          image={battleship}
+          desc='The classic board game built with React and TypeScript. Features interactive drag-and-drop ship placement, ship rotation, and a computer opponent with a targeting algorithm. The project demonstrates React state management, component-based architecture, TypeScript type safety, and the separation of game logic from the user interface'
+          tools={['typescript', 'react']}
+          // liveDemo='liveDemo'
+          github='https://github.com/julianchso/odin-battleship'
         />
       </div>
     </div>
