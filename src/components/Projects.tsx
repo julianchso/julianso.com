@@ -27,7 +27,7 @@ function Projects() {
         <ProjectCard
           title='Battleship'
           image={battleship}
-          desc='The classic board game built with React and TypeScript. Features interactive drag-and-drop ship placement, ship rotation, and a computer opponent with a targeting algorithm. The project demonstrates React state management, component-based architecture, TypeScript type safety, and the separation of game logic from the user interface'
+          desc='The classic board game built with React and TypeScript. Features interactive drag-and-drop ship placement, ship rotation, and a computer opponent with a targeting algorithm. The project demonstrates React state management, component-based architecture, TypeScript type safety, and the separation of game logic from the user interface.'
           tools={['typescript', 'react']}
           // liveDemo='liveDemo'
           github='https://github.com/julianchso/odin-battleship'
